@@ -1,9 +1,9 @@
 #include <iostream>
-#include <base/sparse_matrix_base>
+#include <csr/csr_matrix>
 
 int main()
 {
-    auto spmat   = SPLA::SparseMatrixBase<double>(8, 10, 6);
+    auto spmat   = SPLA::CSRMatrix<double>(8, 10, 6);
     auto nrows   = spmat.get_rows();
     auto ncols   = spmat.get_cols();
     auto nvalues = spmat.get_size();
