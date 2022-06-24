@@ -5,15 +5,15 @@
 namespace SPLA {
 
 template<typename Numeric>
-CSCMatrix<Numeric>::CSCMatrix() {}
+CSCMatrix<Numeric>::CSCMatrix(const std::size_t nrow, const std::size_t ncol, const std::size_t nvalues)
+    : SparseMatrixBase<Numeric>(nrow, ncol, nvalues)
+{
+}
 
 template<typename Numeric>
-CSCMatrix<Numeric>::CSCMatrix(const std::size_t nrow, const std::size_t ncol, const std::size_t nvalues)
+CSCMatrix<Numeric>::CSCMatrix(const CSCMatrix& spmat)
+    : SparseMatrixBase<Numeric>(spmat)
 {
-    this->set_rows(nrow);
-    this->set_cols(ncol);
-    this->set_size(nvalues);
-    this->allocate();
 }
 
 template<typename Numeric>
