@@ -17,9 +17,9 @@ class SparseMatrixBase {
         SparseMatrixBase<Numeric>(const SparseMatrixBase<Numeric> & spmat);
         SparseMatrixBase<Numeric>(const std::size_t nrow, const std::size_t ncol, const std::size_t nvalues);
         ~SparseMatrixBase<Numeric>();
-        const std::size_t get_rows();
-        const std::size_t get_cols();
-        const std::size_t get_size();
+        std::size_t get_rows() const;
+        std::size_t get_cols() const;
+        std::size_t get_size() const;
         void set_rows(std::size_t m);
         void set_cols(std::size_t m);
         void set_size(std::size_t m);

@@ -31,19 +31,19 @@ template<typename Numeric>
 SparseMatrixBase<Numeric>::~SparseMatrixBase() {}
 
 template<typename Numeric>
-const std::size_t SparseMatrixBase<Numeric>::get_rows()
+std::size_t SparseMatrixBase<Numeric>::get_rows() const
 {
     return nrows;
 }
 
 template<typename Numeric>
-const std::size_t SparseMatrixBase<Numeric>::get_cols()
+std::size_t SparseMatrixBase<Numeric>::get_cols() const
 {
     return ncols;
 }
 
 template<typename Numeric>
-const std::size_t SparseMatrixBase<Numeric>::get_size()
+std::size_t SparseMatrixBase<Numeric>::get_size() const
 {
     return nvalues;
 }
