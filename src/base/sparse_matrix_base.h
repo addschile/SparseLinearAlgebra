@@ -8,22 +8,22 @@ template<typename Numeric>
 class SparseMatrixBase {
     protected:
         std::unique_ptr<Numeric[]> data;
-        size_t nrows;
-        size_t ncols;
-        size_t nvalues;
+        std::size_t nrows;
+        std::size_t ncols;
+        std::size_t nvalues;
         void allocate();
     public:
         SparseMatrixBase<Numeric>();
         SparseMatrixBase<Numeric>(const SparseMatrixBase<Numeric> & spmat);
-        SparseMatrixBase<Numeric>(const size_t nrow, const size_t ncol, const size_t nvalues);
+        SparseMatrixBase<Numeric>(const std::size_t nrow, const std::size_t ncol, const std::size_t nvalues);
         ~SparseMatrixBase<Numeric>();
-        const size_t get_rows();
-        const size_t get_cols();
-        const size_t get_size();
-        void set_rows(size_t m);
-        void set_cols(size_t m);
-        void set_size(size_t m);
-        Numeric operator [](size_t idx);
+        const std::size_t get_rows();
+        const std::size_t get_cols();
+        const std::size_t get_size();
+        void set_rows(std::size_t m);
+        void set_cols(std::size_t m);
+        void set_size(std::size_t m);
+        Numeric operator [](std::size_t idx);
 };
 
 }

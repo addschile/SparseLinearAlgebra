@@ -5,17 +5,16 @@
 
 namespace SPLA {
 
-
 template<typename Numeric>
-using IndexPair = std::pair<Numeric, Numeric> ;
+using IndexPair = std::pair<Numeric, Numeric>;
 
 template<typename Numeric>
 struct IndexPairHash
 {
-    size_t operator()(IndexPair<Numeric> const& idx_pair) const
+    std::size_t operator()(IndexPair<Numeric> const& idx_pair) const
     {
-        size_t h1 = std::hash<size_t>{}(idx_pair.first);
-        size_t h2 = std::hash<size_t>{}(idx_pair.second);
+        std::size_t h1 = std::hash<std::size_t>{}(idx_pair.first);
+        std::size_t h2 = std::hash<std::size_t>{}(idx_pair.second);
         boost::hash_combine(h1, h2);
         return h1;
     }
@@ -32,9 +31,9 @@ class DOKMatrix {
     public:
         DOKMatrix<Numeric>();
         ~DOKMatrix<Numeric>();
-        Numeric& operator ()(size_t row_idx, size_t col_idx);
+        Numeric& operator ()(std::size_t row_idx, std::size_t col_idx);
         Numeric& operator [](IndexPair<Numeric>&& idx_pair);
-        void add_element(size_t row_idx, size_t col_idx, Numeric value);
+        void add_element(std::size_t row_idx, std::size_t col_idx, Numeric value);
         void add_element(IndexPair<Numeric>&& idx_pair, Numeric value);
 };
 
