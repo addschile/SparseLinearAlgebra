@@ -73,7 +73,7 @@ void SparseMatrixBase<Numeric>::allocate()
 }
 
 template<typename Numeric>
-Numeric SparseMatrixBase<Numeric>::operator [](std::size_t idx)
+Numeric& SparseMatrixBase<Numeric>::operator [](std::size_t idx)
 {
     return (this->data)[idx];
 }

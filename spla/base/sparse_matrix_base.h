@@ -23,7 +23,7 @@ class SparseMatrixBase {
         void set_rows(std::size_t m);
         void set_cols(std::size_t m);
         void set_size(std::size_t m);
-        Numeric operator [](std::size_t idx);
+        Numeric& operator [](std::size_t idx);
 };
 
 }
