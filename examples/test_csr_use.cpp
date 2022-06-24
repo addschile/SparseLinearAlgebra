@@ -1,5 +1,5 @@
 #include <iostream>
-#include <csr/csr_matrix>
+#include <spla/csr/csr_matrix>
 
 int main()
 {

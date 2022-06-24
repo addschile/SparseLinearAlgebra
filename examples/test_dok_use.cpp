@@ -1,5 +1,5 @@
 #include <iostream>
-#include <dok/dok_matrix>
+#include <spla/dok/dok_matrix>
 
 int main()
 {

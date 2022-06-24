@@ -1,5 +1,5 @@
 #include <iostream>
-#include <base/sparse_matrix_base>
+#include <spla/base/sparse_matrix_base>
 
 int main()
 {

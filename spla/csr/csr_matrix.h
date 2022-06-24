@@ -1,7 +1,7 @@
 #pragma once
 
 #include <memory>
-#include <base/sparse_matrix_base>
+#include <spla/base/sparse_matrix_base>
 
 namespace SPLA {
 
