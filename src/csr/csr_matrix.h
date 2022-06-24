@@ -14,7 +14,6 @@ class CSRMatrix : public SparseMatrixBase<Numeric> {
         CSRMatrix<Numeric>();
         CSRMatrix<Numeric>(const std::size_t nrows, const std::size_t ncols, const std::size_t nvalues);
         CSRMatrix<Numeric>(const CSRMatrix& spmat);
-        CSRMatrix<Numeric>(const CSRMatrix& spmat);
         ~CSRMatrix<Numeric>();
 };
 
