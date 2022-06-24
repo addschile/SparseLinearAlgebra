@@ -15,7 +15,6 @@ SparseMatrixBase<Numeric>::SparseMatrixBase(const SparseMatrixBase<Numeric> & sp
     std::size_t nvalues = spmat.get_size();
     auto spmat_data = spmat.get_data();
     std::copy(spmat_data, spmat_data + nvalues, data);
-
 }
 
 template<typename Numeric>
@@ -74,6 +73,12 @@ void SparseMatrixBase<Numeric>::allocate()
 
 template<typename Numeric>
 Numeric& SparseMatrixBase<Numeric>::operator [](std::size_t idx)
+{
+    return (this->data)[idx];
+}
+
+template<typename Numeric>
+Numeric& SparseMatrixBase<Numeric>::operator [](std::size_t idx) const
 {
     return (this->data)[idx];
 }
